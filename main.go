@@ -1,9 +1,11 @@
 package main
+
 import (
 	"fmt"
 	"os"
-	"github.com/joho/godotenv"
+
 	"eef.gocord/bot"
+	"github.com/joho/godotenv"
 )
 
 func main() {
@@ -12,6 +14,7 @@ func main() {
 		fmt.Println("Error loading .env file")
 	}
 	botToken := os.Getenv("DISCORD_TOKEN")
-	bot.Token = botToken;
-	bot.Start();
+	fmt.Println(botToken)
+	bot.Token = botToken
+	bot.Start()
 }
